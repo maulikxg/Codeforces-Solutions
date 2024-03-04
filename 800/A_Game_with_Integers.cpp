@@ -168,35 +168,22 @@ void _print(map<T, V> v)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void solve()
-{   
+{
     int n;
-    string s;
-    cin >> n >> s;
-    int cnt = 0, ct = 0, mx = 0;
-    for (char c : s)
+    cin >> n;
+
+    if (n % 3 == 0)
     {
-        if (c == '.')
-        {
-            cnt++;
-            ct++;
-        }
-        if (c == '#')
-        {
-            mx = max(mx, ct);
-            ct = 0;
-        }
+        cout << "Second" << endl;
     }
-    mx = max(ct, mx);
-    if (cnt == 0)
-        cout << 0 << endl;
-    else if (mx > 2)
-        cout << 2 << endl;
     else
-        cout << cnt << endl;
+    {
+        cout << "First" << endl;
+    }
 }
 
 int32_t main()
-{   
+{
     FAST_IO;
     int TC = 1;
     cin >> TC;
